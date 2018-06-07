@@ -1,21 +1,5 @@
 var wrapLog = function (callback, name) {
 
-  /*
-
-  var aFunction = function(x, y, z){
-    if(z == null)
-      console.log(name + "(" + x + ', ' + y + ') => ' + callback(x,y));
-    //if(z != null)
-    else
-      console.log(name + "(" + x + ', ' + y + ', ' + z + ') => ' + callback(x,y,z));
-    return callback;
-  }
-
-  return aFunction;
-  //console.log(aFunction.x)
-
-  */
-
   var aFunction = function(...args){
     var output = name + "(";
     for(arg in args){
@@ -31,11 +15,6 @@ var wrapLog = function (callback, name) {
   }
 
   return aFunction;
-  //console.log(aFunction.x)
-
-
-  //return callback;
-
 
 
 };
